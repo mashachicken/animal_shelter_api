@@ -1,8 +1,8 @@
 class AnimalsController < ApplicationController
 
   def index
-    @animals = {"animal": "cat."}
-    json_response(@animals)
+    @quotes = Quote.all
+    json_response(@quotes)
   end
   def show
     @animal = Animal.find(params[:id])
@@ -10,13 +10,17 @@ class AnimalsController < ApplicationController
   end
 
   def create
-    @animal = Animal.create(quote_params)
-    json_response(@animal)
+    @quote = Quote.create!(quote_params)
+    json_response(@quote, :created)
   end
 
   def update
-    @animal = Animal.find(params[:id])
-    @animal.update(quote_params)
+    @quote = Quote.find(params[:id])
+    if @quote.update!(quote_params)
+      render status: 200, json: {
+       message: "This quote has been updated successfully."
+       }
+    end
   end
 
   def destroy
