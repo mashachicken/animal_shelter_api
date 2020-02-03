@@ -1,11 +1,17 @@
 class AnimalsController < ApplicationController
 
   def index
-    @quotes = Quote.all
+    name = params[:name]
+    binding.pry
+    @quotes = Quote.search(name)
     json_response(@quotes)
   end
   def show
     @animal = Animal.find(params[:id])
+    json_response(@animal)
+  end
+  def random
+    @animal = Animal.find(params[rand(1...50)])
     json_response(@animal)
   end
 
