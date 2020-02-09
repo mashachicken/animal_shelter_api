@@ -2,8 +2,8 @@
 #### 02.01.20
 #### By Masha Ivy
 ## Description
-_This program is an API-only application for a potential animal shelter. It should list the pets they have available. _
-## Specs_
+_This program is an API-only application for a potential animal shelter. It should list the pets they have available. 
+## Specs
 
 * _Users are able view the animal_
   * _Users are able to add, update and delete animals_
