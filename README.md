@@ -2,12 +2,21 @@
 #### 02.01.20
 #### By Masha Ivy
 ## Description
-_This program is an API-only application for a potential animal shelter. It should list the pets they have available. 
+_This program is an API-only application for a potential animal shelter. It should list the pets they have available._
 ## Specs
 
-* _Users are able view the animal_
+* _Users are able to view the animal_
   * _Users are able to add, update and delete animals_
   * _Users can use this API in their own application_
+  
+## API endpoints 
+* _GET /animals - display a list of all animals available at the shelter_ 
+* _POST /animals - add a new animal to the list_
+* _GET /animals/:id - display an individual animal and its details_
+* _PATCH  /animals/:id - update the detail information of an animal_
+* _DELETE /animals/:id - remove the animal from the list_
+* _GET /random - display the information of a randomly picked animal_
+
 
 
 ## Setup/Installation Requirements
